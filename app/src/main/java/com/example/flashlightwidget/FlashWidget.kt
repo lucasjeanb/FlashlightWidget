@@ -1,17 +1,17 @@
 package com.example.flashlightwidget
 
-import android.app.AlarmManager
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
+import android.hardware.camera2.CameraAccessException
+import android.hardware.camera2.CameraManager
 import android.widget.RemoteViews
-import com.example.vicky.clickablewidgetexample.MyPreference
-import java.util.*
+import androidx.core.content.ContextCompat.getSystemService
 
 
-class ExampleAppWidgetProvider : AppWidgetProvider() {
+class FlashWidget : AppWidgetProvider() {
 
     override fun onUpdate(
         context: Context,
@@ -39,5 +39,7 @@ class ExampleAppWidgetProvider : AppWidgetProvider() {
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
     }
+
+
 }
 
